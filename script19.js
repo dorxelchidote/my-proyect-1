@@ -1,5 +1,5 @@
 function readUsers(con_auth) {
-    let url = "http://localhost:3000/users"
+    let url = "https://dorxelchidote.github.io/my-proyect-1/users"
     let xhr = new XMLHttpRequest();
     xhr.open('GET', url);
     if(con_auth){
