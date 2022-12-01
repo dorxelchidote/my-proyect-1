@@ -1,18 +1,27 @@
 import express from 'express';
 import chalk from 'chalk';
 import cors from 'cors';
+
+//IMPORTAMOS ESTOS:
 import url from 'url';
 import path from 'path';
+//-----------------
+
 import ascii_cats from 'ascii-cats';
 import * as fs from 'node:fs';
 
-
+//AGREGAMOS ESTAS CONSTANTES
 const __filename = url.fileURLToPath(import.meta.url);
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
+//_--------------
 
 const app = express();
 const port = 3000;
+
+//USAMOS EL DIRNAME:
 app.use(express.static(__dirname));
+//--------------------------------
+
 app.use(cors({
     methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
 }));
