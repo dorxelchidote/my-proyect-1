@@ -42,7 +42,8 @@ app.use("/users", checkAuth);
 
 app.get('/', (req, res) => {
     console.log(chalk.blue("Entró a la raíz"));
-    res.send('Raíz del sitio');
+    //res.send('Raíz del sitio');
+    res.sendFile("index.html");
 });
 
 app.get('/users', (req, res) => {
